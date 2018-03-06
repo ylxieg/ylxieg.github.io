@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://ylxie.top/2018/03/07/Jenkins/</loc>
+    <lastmod>2018-03-06T14:32:54.384Z</lastmod>
+    <data>
+        <display>
+        <title>Jenkins持续构建-最新教程-Mac版</title>
+        <pubTime>2018-03-06T20:08:51.000Z</pubTime>
+        
+        <tag>持续构建</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ylxie.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ylxie.top/2018/03/02/SetBlog/</loc>
+    <lastmod>2018-03-06T13:28:06.741Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo+Coding.net/Github搭建自己的博客</title>
+        <pubTime>2018-03-02T14:38:43.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ylxie.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://ylxie.top/2018/03/02/hello-world/</loc>
+    <lastmod>2018-03-02T12:32:03.943Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-03-02T12:32:03.943Z</pubTime>
+        
+        <tag>记事</tag>
+         
+        <tag>其他</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ylxie.top/categories/%E9%9A%8F%E7%AC%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+</urlset>
