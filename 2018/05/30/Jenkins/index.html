@@ -100,27 +100,41 @@
 
 
   
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="持续构建," />
 
 
-<meta name="description" content="博客宗旨: 把最实用的经验，分享给最需要的读者，希望每一位来访的朋友都能有所收获！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于本站">
-<meta property="og:url" content="http://ylxie.top/about/index.html">
+<meta name="description" content="Jenkins是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。(百度百科🤦‍♀️) Jenkins安装Jenkins官网下载  选择相对应的环境下载   打开下载好的.pkg文件、狂点下一步即可安装完成后系统会默认生成一个Jenkins用户，Jenkins账户密码可在 系统偏好设置-用户    与群组-其">
+<meta name="keywords" content="持续构建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jenkins持续构建-采坑大全-Mac版">
+<meta property="og:url" content="http://ylxie.top/2018/05/30/Jenkins/index.html">
 <meta property="og:site_name" content="一叶孤舟">
-<meta property="og:description" content="博客宗旨: 把最实用的经验，分享给最需要的读者，希望每一位来访的朋友都能有所收获！">
+<meta property="og:description" content="Jenkins是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。(百度百科🤦‍♀️) Jenkins安装Jenkins官网下载  选择相对应的环境下载   打开下载好的.pkg文件、狂点下一步即可安装完成后系统会默认生成一个Jenkins用户，Jenkins账户密码可在 系统偏好设置-用户    与群组-其">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-02T12:32:03.943Z">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/jenkins.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/1.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/2.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/3.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/4.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/5.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/6.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/7.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/8.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/9.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/10.png">
+<meta property="og:image" content="http://ylxie.top/2018/05/30/Jenkins/11.png">
+<meta property="og:updated_time" content="2018-05-30T03:43:09.131Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于本站">
-<meta name="twitter:description" content="博客宗旨: 把最实用的经验，分享给最需要的读者，希望每一位来访的朋友都能有所收获！">
+<meta name="twitter:title" content="Jenkins持续构建-采坑大全-Mac版">
+<meta name="twitter:description" content="Jenkins是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。(百度百科🤦‍♀️) Jenkins安装Jenkins官网下载  选择相对应的环境下载   打开下载好的.pkg文件、狂点下一步即可安装完成后系统会默认生成一个Jenkins用户，Jenkins账户密码可在 系统偏好设置-用户    与群组-其">
+<meta name="twitter:image" content="http://ylxie.top/2018/05/30/Jenkins/jenkins.png">
 
 
 
 
 
 
-  <link rel="canonical" href="http://ylxie.top/about/"/>
+  <link rel="canonical" href="http://ylxie.top/2018/05/30/Jenkins/"/>
 
 
 
@@ -129,7 +143,7 @@
     sidebar: "",
   };
 </script>
-  <title>关于本站 | 一叶孤舟</title>
+  <title>Jenkins持续构建-采坑大全-Mac版 | 一叶孤舟</title>
   
 
 
@@ -318,49 +332,234 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ylxie.top/2018/05/30/Jenkins/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Matt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶孤舟">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">关于本站</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>博客宗旨: 把最实用的经验，分享给最需要的读者，希望每一位来访的朋友都能有所收获！</p>
-
+          <h1 class="post-title" itemprop="name headline">Jenkins持续构建-采坑大全-Mac版</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-30T10:08:51Z">
+                2018-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/随笔/" itemprop="url" rel="index">
+                    <span itemprop="name">随笔</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2018/05/30/Jenkins/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2018/05/30/Jenkins/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2018/05/30/Jenkins/" class="leancloud_visitors" data-flag-title="Jenkins持续构建-采坑大全-Mac版">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"></span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>Jenkins是一个开源软件项目，是基于Java开发的一种持续集成工具，用于监控持续重复的工作，旨在提供一个开放易用的软件平台，使软件的持续集成变成可能。(百度百科🤦‍♀️)</p>
+<h3 id="Jenkins安装"><a href="#Jenkins安装" class="headerlink" title="Jenkins安装"></a>Jenkins安装</h3><p><a href="https://jenkins.io/download/" target="_blank" rel="noopener">Jenkins官网下载</a></p>
+<ol>
+<li><p>选择相对应的环境下载<br> <img src="/2018/05/30/Jenkins/jenkins.png" alt="Jenkins官网"></p>
+</li>
+<li><p>打开下载好的.pkg文件、狂点下一步即可<br>安装完成后系统会默认生成一个<a href="#">Jenkins用户</a>，Jenkins账户密码可在 <a href="#">系统偏好设置-用户    与群组-其他用户-管理员-更改密码</a> 重新设置<br> <img src="/2018/05/30/Jenkins/1.png" alt="安装步骤"></p>
+</li>
+<li><p>安装完成后会自动打开浏览器、如未打开可手动打开浏览器输入<a href="http://localhost:8080/login?from=%2F" target="_blank" rel="noopener">http://localhost:8080/login?from=%2F</a><br> <img src="/2018/05/30/Jenkins/2.png" alt="安装成功"></p>
+</li>
+<li><p>点击Finder: 按红字提示路径无法打开Finder,是因为secrets访问权限问题。按红色框提示输入电脑密码解锁修改文件夹权限和initialAdminPassword文件权限即可访问<br><code>$ command+shift+G: /Users/Shared/Jenkins/Home/</code><br> <img src="/2018/05/30/Jenkins/3.png" alt="管理员密码"></p>
+</li>
+<li><p>复制initialAdminPassword内密码到输入框点继续进行下一步<br> <img src="/2018/05/30/Jenkins/4.png" alt="解锁Jenkins"></p>
+</li>
+<li><p>此处是个bug。提示Jenkins实例离线、无法获取插件。【不要跳过插件安装】  如正常请看第9步骤<br> <img src="/2018/05/30/Jenkins/5.png" alt="Jenkins实例离线"></p>
+</li>
+<li><p>新打开一个tab页，输入网址<a href="http://localhost:8080/pluginManager/advanced" target="_blank" rel="noopener">http://localhost:8080/pluginManager/advanced</a>,最下面有个【升级站点】，把其中的链接改成<a href="http://updates.jenkins.io/update-center.json" target="_blank" rel="noopener">http://updates.jenkins.io/update-center.json</a>就好了。<br> <img src="/2018/05/30/Jenkins/6.png" alt="Jenkins实例离线"></p>
+</li>
+<li><p>更换完成后点击立即获取。如获取成功则会提示 xx秒之前获取了更新信息。<br> <img src="/2018/05/30/Jenkins/7.png" alt="Jenkins实例离线"></p>
+</li>
+<li><p>此时刷新Jenkins页面还是会提示离线，打开【活动监视器】搜索java，然后强制退出。关闭java服务后再刷新页面就显示正常了。<br> <img src="/2018/05/30/Jenkins/8.png" alt="Jenkins实例离线"></p>
+</li>
+<li><p>此时为正常显示页面，按需求选择安装推荐或自定义安装即可<br> <img src="/2018/05/30/Jenkins/9.png" alt="Jenkins实例离线"></p>
+</li>
+<li><p>安装完成后创建一个管理员用户<br><img src="/2018/05/30/Jenkins/10.png" alt="Jenkins实例离线"></p>
+</li>
+<li><p>创建完成后点击下一步，进入Jenkins。此时Jenkins已安装完成。<br><img src="/2018/05/30/Jenkins/11.png" alt="Jenkins实例离线"></p>
+</li>
+</ol>
+
       
     </div>
     
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/持续构建/" rel="tag"># 持续构建</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/10/swift-grammar/" rel="next" title="swift_grammar">
+                <i class="fa fa-chevron-left"></i> swift_grammar
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-    
-    
-    
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -381,8 +580,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -477,6 +685,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Jenkins安装"><span class="nav-number">1.</span> <span class="nav-text">Jenkins安装</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -631,6 +855,23 @@
     <script id="dsq-count-scr" src="https://yi-xie-gu-zhou.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://ylxie.top/2018/05/30/Jenkins/';
+        this.page.identifier = '2018/05/30/Jenkins/';
+        this.page.title = 'Jenkins持续构建-采坑大全-Mac版';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://yi-xie-gu-zhou.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 

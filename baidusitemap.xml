@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://ylxie.top/2018/03/07/Jenkins/</loc>
-    <lastmod>2018-03-06T14:32:54.384Z</lastmod>
+    <loc>http://ylxie.top/2018/05/30/Jenkins/</loc>
+    <lastmod>2018-05-30T03:43:09.131Z</lastmod>
     <data>
         <display>
-        <title>Jenkins持续构建-最新教程-Mac版</title>
-        <pubTime>2018-03-06T20:08:51.000Z</pubTime>
+        <title>Jenkins持续构建-采坑大全-Mac版</title>
+        <pubTime>2018-05-30T10:08:51.000Z</pubTime>
         
         <tag>持续构建</tag>
          
@@ -18,6 +18,21 @@
              
               <breadCrumb title="随笔" url="http://ylxie.top/categories/%E9%9A%8F%E7%AC%94/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ylxie.top/2018/03/10/swift-grammar/</loc>
+    <lastmod>2018-03-09T13:11:15.455Z</lastmod>
+    <data>
+        <display>
+        <title>swift_grammar</title>
+        <pubTime>2018-03-09T21:11:15.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
