@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="一叶孤舟">
 <meta property="og:description" content="内存管理 说一下内存管理中你经常用的几个修饰符assign “设置方法” 只会执行针对“纯量”的简单赋值操作。strong  此特质表明该属性定义了一种“拥有关系”。为这种属性设置新值时，设置方法会先保留新值，并释放旧值，然后再将新值设置上去。weak 此特质表明该属性定义了一种“非拥有关系”。为这种属性设置新值时，设置方法既不保留新值，也不释放旧值。此特质同assign类似，然而在属性所指的对象">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-30T04:44:15.422Z">
+<meta property="og:updated_time" content="2019-03-06T02:35:37.397Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS常见面试题">
 <meta name="twitter:description" content="内存管理 说一下内存管理中你经常用的几个修饰符assign “设置方法” 只会执行针对“纯量”的简单赋值操作。strong  此特质表明该属性定义了一种“拥有关系”。为这种属性设置新值时，设置方法会先保留新值，并释放旧值，然后再将新值设置上去。weak 此特质表明该属性定义了一种“非拥有关系”。为这种属性设置新值时，设置方法既不保留新值，也不释放旧值。此特质同assign类似，然而在属性所指的对象">
@@ -360,7 +360,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T23:54:28+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-16T15:54:28Z">
                 2018-04-16
               </time>
             
@@ -533,6 +533,12 @@
 <li><p>有a b c d 四个异步请求，如何在a b  c 都完成之后去执行d</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1) 创建队列</span><br><span class="line">queue dispatch_queue_t  queue = (dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT,0))</span><br><span class="line">2) 创建组</span><br><span class="line">group dispatch_group_t group = dispatch_group_creat();</span><br><span class="line">3) 将queue和group加入到执行的任务中 并执行a  b  c</span><br><span class="line">dispatch_group_async(group,queue,^&#123;//任务a&#125;)</span><br><span class="line">dispatch_group_async(group,queue,^&#123;//任务b&#125;)</span><br><span class="line">dispatch_group_async(group,queue,^&#123;//任务c&#125;)</span><br><span class="line">4) 完了之后引用</span><br><span class="line">dispatch_group_notify(group,dispatch_get_main_queue()),^&#123;</span><br><span class="line">    //执行d操作</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
+</ol>
+<h1 id="UIView-和-CALayer的区别"><a href="#UIView-和-CALayer的区别" class="headerlink" title="UIView 和 CALayer的区别"></a>UIView 和 CALayer的区别</h1><ol>
+<li>UIView集成UIResponder，因此UIView可以处理响应时间，而CALayer集成NSObject，所以它只负责内容的创建、绘制。</li>
+<li>UIView负责对内容的管理，而CALayer则是对内容的绘制。</li>
+<li>UIView中的位置属性只有frame、bounds、center，而CALyaer除了具备这些属性之外还有anchorPoint、position。</li>
+<li>通过修改CALayer可以实现UIView无法实现的很多高级功能。             </li>
 </ol>
 
       
@@ -762,7 +768,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#内存管理"><span class="nav-number">1.</span> <span class="nav-text">内存管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KVO-KVC"><span class="nav-number">2.</span> <span class="nav-text">KVO-KVC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Block"><span class="nav-number">3.</span> <span class="nav-text">Block</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方框架和原理"><span class="nav-number">4.</span> <span class="nav-text">第三方框架和原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下拉刷新的原理（这个结合contentInset和contentOffset简单说说就可以了）"><span class="nav-number">5.</span> <span class="nav-text">下拉刷新的原理（这个结合contentInset和contentOffset简单说说就可以了）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据存储"><span class="nav-number">6.</span> <span class="nav-text">数据存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Runloop（这个具体没什么问题，看文档吧）"><span class="nav-number">7.</span> <span class="nav-text">Runloop（这个具体没什么问题，看文档吧）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多线程"><span class="nav-number">8.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计模式"><span class="nav-number">9.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Runtime"><span class="nav-number">10.</span> <span class="nav-text">Runtime</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性能优化"><span class="nav-number">11.</span> <span class="nav-text">性能优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSTimer-（这个被问的多）"><span class="nav-number">12.</span> <span class="nav-text">NSTimer （这个被问的多）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#延伸问题"><span class="nav-number">13.</span> <span class="nav-text">延伸问题:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#内存管理"><span class="nav-number">1.</span> <span class="nav-text">内存管理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#KVO-KVC"><span class="nav-number">2.</span> <span class="nav-text">KVO-KVC</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Block"><span class="nav-number">3.</span> <span class="nav-text">Block</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三方框架和原理"><span class="nav-number">4.</span> <span class="nav-text">第三方框架和原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下拉刷新的原理（这个结合contentInset和contentOffset简单说说就可以了）"><span class="nav-number">5.</span> <span class="nav-text">下拉刷新的原理（这个结合contentInset和contentOffset简单说说就可以了）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数据存储"><span class="nav-number">6.</span> <span class="nav-text">数据存储</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Runloop（这个具体没什么问题，看文档吧）"><span class="nav-number">7.</span> <span class="nav-text">Runloop（这个具体没什么问题，看文档吧）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多线程"><span class="nav-number">8.</span> <span class="nav-text">多线程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设计模式"><span class="nav-number">9.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Runtime"><span class="nav-number">10.</span> <span class="nav-text">Runtime</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#性能优化"><span class="nav-number">11.</span> <span class="nav-text">性能优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#NSTimer-（这个被问的多）"><span class="nav-number">12.</span> <span class="nav-text">NSTimer （这个被问的多）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#延伸问题"><span class="nav-number">13.</span> <span class="nav-text">延伸问题:</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#UIView-和-CALayer的区别"><span class="nav-number"></span> <span class="nav-text">UIView 和 CALayer的区别</span></a></div>
             
 
           </div>
@@ -782,7 +788,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
