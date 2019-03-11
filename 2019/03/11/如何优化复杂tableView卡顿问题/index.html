@@ -100,27 +100,28 @@
 
 
   
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="面试题," />
 
 
-<meta name="description" content="Hi,我是Matt，一名iOS开发工程师。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="一叶孤舟">
-<meta property="og:url" content="http://ylxie.top/tags/index.html">
+<meta name="description" content="导致tableView卡顿的原因： cellForRowAtIndexPath:方法中处理了过多业务 cell的subview层级太复杂，做了大量透明处理   cell的height动态变化时计算方式不对  优化tableView： cell的行高不是固定值，需要计算，则要尽可能缓存行高值，避免重复计算行高。因为 heightForRowAtIndexPath:是调用最频繁的方法。 滑动时按需加载">
+<meta name="keywords" content="面试题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何优化复杂tableView卡顿问题？">
+<meta property="og:url" content="http://ylxie.top/2019/03/11/如何优化复杂tableView卡顿问题/index.html">
 <meta property="og:site_name" content="一叶孤舟">
-<meta property="og:description" content="Hi,我是Matt，一名iOS开发工程师。">
+<meta property="og:description" content="导致tableView卡顿的原因： cellForRowAtIndexPath:方法中处理了过多业务 cell的subview层级太复杂，做了大量透明处理   cell的height动态变化时计算方式不对  优化tableView： cell的行高不是固定值，需要计算，则要尽可能缓存行高值，避免重复计算行高。因为 heightForRowAtIndexPath:是调用最频繁的方法。 滑动时按需加载">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-02T12:32:03.945Z">
+<meta property="og:updated_time" content="2019-03-11T07:02:06.843Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一叶孤舟">
-<meta name="twitter:description" content="Hi,我是Matt，一名iOS开发工程师。">
+<meta name="twitter:title" content="如何优化复杂tableView卡顿问题？">
+<meta name="twitter:description" content="导致tableView卡顿的原因： cellForRowAtIndexPath:方法中处理了过多业务 cell的subview层级太复杂，做了大量透明处理   cell的height动态变化时计算方式不对  优化tableView： cell的行高不是固定值，需要计算，则要尽可能缓存行高值，避免重复计算行高。因为 heightForRowAtIndexPath:是调用最频繁的方法。 滑动时按需加载">
 
 
 
 
 
 
-  <link rel="canonical" href="http://ylxie.top/tags/"/>
+  <link rel="canonical" href="http://ylxie.top/2019/03/11/如何优化复杂tableView卡顿问题/"/>
 
 
 
@@ -129,7 +130,7 @@
     sidebar: "",
   };
 </script>
-  <title>标签 | 一叶孤舟</title>
+  <title>如何优化复杂tableView卡顿问题？ | 一叶孤舟</title>
   
 
 
@@ -318,85 +319,230 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ylxie.top/2019/03/11/如何优化复杂tableView卡顿问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Matt">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="一叶孤舟">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline"></h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                  
-                    
-                  
-                
-                目前共计 7 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Hexo/" style="font-size: 12px; color: #ccc">Hexo</a> <a href="/tags/Swift/" style="font-size: 12px; color: #ccc">Swift</a> <a href="/tags/iOS/" style="font-size: 30px; color: #111">iOS</a> <a href="/tags/其他/" style="font-size: 12px; color: #ccc">其他</a> <a href="/tags/持续构建/" style="font-size: 12px; color: #ccc">持续构建</a> <a href="/tags/记事/" style="font-size: 12px; color: #ccc">记事</a> <a href="/tags/面试题/" style="font-size: 30px; color: #111">面试题</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">如何优化复杂tableView卡顿问题？</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-11T15:00:28Z">
+                2019-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面试题/" itemprop="url" rel="index">
+                    <span itemprop="name">面试题</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/03/11/如何优化复杂tableView卡顿问题/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2019/03/11/如何优化复杂tableView卡顿问题/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/03/11/如何优化复杂tableView卡顿问题/" class="leancloud_visitors" data-flag-title="如何优化复杂tableView卡顿问题？">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text"></span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h4 id="导致tableView卡顿的原因："><a href="#导致tableView卡顿的原因：" class="headerlink" title="导致tableView卡顿的原因："></a>导致tableView卡顿的原因：</h4><ol>
+<li>cellForRowAtIndexPath:方法中处理了过多业务</li>
+<li>cell的subview层级太复杂，做了大量透明处理  </li>
+<li>cell的height动态变化时计算方式不对</li>
+</ol>
+<h4 id="优化tableView："><a href="#优化tableView：" class="headerlink" title="优化tableView："></a>优化tableView：</h4><ol>
+<li>cell的行高不是固定值，需要计算，则要尽可能缓存行高值，避免重复计算行高。因为 heightForRowAtIndexPath:是调用最频繁的方法。</li>
+<li>滑动时按需加载，这个在大量图片展示，网络加载的时候很管用!(SDWebImage 已经实现异 步加载，配合这条性能杠杠的)。</li>
+<li>正确使用 reuseIdentifier 来重用 Cells</li>
+<li>尽量少用或不用透明图层</li>
+<li>如果 Cell 内现实的内容来自 web，使用异步加载，缓存请求结果</li>
+<li>减少 subviews 的数量</li>
+<li>在 heightForRowAtIndexPath:中尽量不使用 cellForRowAtIndexPath:，如果你需要用到它， 只用一次然后缓存结果</li>
+<li>所有的子视图都预先创建，如果不需要显示可以设置 hidden，尽量少动态给 Cell 添加 View </li>
+<li>颜色不要使用 alph</li>
+<li>栅格化，</li>
+<li>cell 异步加载图片以及缓存 </li>
+<li>cell 的 subViews 的各级 opaque 值要设成 YES，尽量不要包含透明的子 View<br>opaque 用于辅助绘图系统，表示 UIView 是否透明。在不透明的情况下，渲染视图时需要快速 地渲染，以􏰀高性能。渲染最慢的操作之一是混合(blending)。􏰀高性能的方法是减少混合操 作的次数，其实就是 GPU 的不合理使用，这是硬件来完成的(混合操作由 GPU 来执行，因为这 个硬件就是用来做混合操作的，当然不只是混合)。 优化混合操作的关键点是在平衡 CPU 和 GPU 的负载。还有就是 cell 的 layer 的 shouldRasterize 要设成 YES。</li>
+<li>不要将 tableview 的背景颜色设置成一个图片。这回严重影响 UITableView 的滑动速度。在 限时免费搜索里，我曾经翻过一个错误:self.tableView_.backgroundColor = [UIColorcolorWithPatternImage:[UIImageimageNamed:@”background.png”]]; 通过这种方式 设置 UITableView 的背景颜色会严重影响 UTIableView 的滑动流畅性。修改成 self.tableView_.backgroundColor = [UIColor clearColor];之后，fps 从 43 上升到 60 左右。 滑动比较流畅。</li>
+<li>异步绘制</li>
+</ol>
+<blockquote>
+<p>(1) 在绘制字符串时，尽可能使用 drawAtPoint: withFont:，而不要使用更复杂的 drawAtPoint:(CGPoint)point forWidth:(CGFloat)width withFont:(UIFont *)font lineBreakMode:(UILineBreakMode)lineBreakMode; 如果要绘制过长的字符串，建议自己先截 断，然后使用 drawAtPoint: withFont:方法绘制。<br>(2) 在绘制图片时，尽量使用 drawAtPoint，而不要使用 drawInRect。drawInRect 如果在绘 制过程中对图片进行放缩，会特别消耗 CPU。<br>(3) 其实，最快的绘制就是你不要做任何绘制。有时通过 UIGraphicsBeginImageContextWithOptions() 或者 CGBitmapContextCeate() 创建位图会显 得更有意义，从位图上面抓取图像，并设置为 CALayer 的内容。如果你必须实现 -drawRect:，并且你必须绘制大量的东西，这将占用时间。<br>(4) 如果绘制 cell 过程中，需要下载 cell 中的图片，建议在绘制 cell 一段时间后再开启图 片下载任务。譬如先画一个默认图片，然后在 0.5S 后开始下载本 cell 的图片。<br>(5) 即使下载 cell 图片是在子线程中进行，在绘制 cell 过程中，也不能开启过多的子线程。 最好只有一个下载图片的子线程在活动。否则也会影响 UITableViewCell 的绘制，因而影响了 UITableViewCell 的滑动速度。(建议结合使用 NSOpeartion 和 NSOperationQueue 来下载图片， 如果想尽可能找的下载图片，可以把[self.queuesetMaxConcurrentOperationCount:4];)<br>(6) 最好自己写一个 cache，用来缓存 UITableView 中的 UITableViewCell，这样在整个 UITableView 的生命周期里，一个 cell 只需绘制一次，并且如果发生内存不足，也可以有效的 释放掉缓存的 cell。</p>
+</blockquote>
+
       
     </div>
     
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面试题/" rel="tag"># 面试题</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/05/30/Jenkins/" rel="next" title="Jenkins持续构建-采坑大全-Mac版">
+                <i class="fa fa-chevron-left"></i> Jenkins持续构建-采坑大全-Mac版
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
 
 
 
-    
-    
-    
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -417,8 +563,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -525,6 +680,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#导致tableView卡顿的原因："><span class="nav-number">1.</span> <span class="nav-text">导致tableView卡顿的原因：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#优化tableView："><span class="nav-number">2.</span> <span class="nav-text">优化tableView：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -679,6 +850,23 @@
     <script id="dsq-count-scr" src="https://yi-xie-gu-zhou.disqus.com/count.js" async></script>
   
 
+  
+    <script type="text/javascript">
+      var disqus_config = function () {
+        this.page.url = 'http://ylxie.top/2019/03/11/如何优化复杂tableView卡顿问题/';
+        this.page.identifier = '2019/03/11/如何优化复杂tableView卡顿问题/';
+        this.page.title = '如何优化复杂tableView卡顿问题？';
+      };
+      function loadComments () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://yi-xie-gu-zhou.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      }
+      
+        loadComments();
+      
+    </script>
   
 
 
