@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://ylxie.top/2019/05/09/%E5%B0%81%E8%A3%85Framework%E7%88%AC%E5%9D%91%E8%AE%B0%E5%BD%95/</loc>
+    <lastmod>2019-05-08T09:58:28.154Z</lastmod>
+    <data>
+        <display>
+        <title>开发常见bug爬坑记录</title>
+        <pubTime>2019-05-08T17:27:37.000Z</pubTime>
+        
+        <tag>iOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Bug" url="http://ylxie.top/categories/Bug/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ylxie.top/2019/03/24/2019%E5%B9%B4%E9%9D%A2%E8%AF%95%E9%A2%98(%E5%9F%BA%E7%A1%80)%E4%BB%A5%E5%8F%8A%E7%AD%94%E6%A1%88/</loc>
     <lastmod>2019-03-29T02:34:09.074Z</lastmod>
     <data>
@@ -64,28 +84,6 @@
 
     
   <url>
-    <loc>http://ylxie.top/2018/03/02/hello-world/</loc>
-    <lastmod>2018-05-30T04:44:15.429Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2018-03-01T20:08:51.000Z</pubTime>
-        
-        <tag>记事</tag>
-         
-        <tag>其他</tag>
-         
-         
-           
-             
-              <breadCrumb title="随笔" url="http://ylxie.top/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ylxie.top/2018/03/26/question/</loc>
     <lastmod>2018-05-30T04:44:15.429Z</lastmod>
     <data>
@@ -101,6 +99,28 @@
            
              
               <breadCrumb title="Bug" url="http://ylxie.top/categories/Bug/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ylxie.top/2018/03/02/hello-world/</loc>
+    <lastmod>2018-05-30T04:44:15.429Z</lastmod>
+    <data>
+        <display>
+        <title>Hello World</title>
+        <pubTime>2018-03-01T20:08:51.000Z</pubTime>
+        
+        <tag>记事</tag>
+         
+        <tag>其他</tag>
+         
+         
+           
+             
+              <breadCrumb title="随笔" url="http://ylxie.top/categories/%E9%9A%8F%E7%AC%94/"/>
           
         </display>
     </data>
